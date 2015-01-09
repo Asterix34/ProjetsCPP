@@ -25,11 +25,13 @@ string melanger(string mot) {
 }
 
 string tirer() {
-    string* mots = getMots();
+    vector<string> mots;
+    getMots(mots);
 
     srand(time(0));
-    int nbAleatoire = rand() % sizeof(mots);
+    int nbAleatoire = rand() % mots.size();
 
+    //cout << mots.size();
     return mots[nbAleatoire];
 }
 
@@ -44,16 +46,12 @@ void creer() {
     monFlux << "PRESIDENT" << endl;
 }
 
-string* getMots() {
+void getMots(vector<string> &mots) {
     ifstream monFlux("C:/Users/HumanBooster/Desktop/mots.txt");
-
-    vector<string> mots;
 
     string mot;
 
     while (getline(monFlux, mot)) {
         mots.push_back(mot);
     }
-
-    return &mots[0];
 }
