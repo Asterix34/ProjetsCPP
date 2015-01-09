@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1420809031 source:c:\users\humanbooster\documents\projetscpp\motmystere\main.cpp
-	<iostream>
-	"motMystere.h"
-
-1420809743 c:\users\humanbooster\documents\projetscpp\motmystere\motmystere.h
-	<vector>
-
